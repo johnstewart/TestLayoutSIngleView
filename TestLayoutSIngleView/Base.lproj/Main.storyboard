@@ -1,24 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OOc-2o-Hzn">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--mBVC-->
+        <scene sceneID="pID-KO-DQh">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController title="mBVC" id="OOc-2o-Hzn" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="beP-pG-uk8">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1X-my-ZuL">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="311"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="weT-2e-KZm" userLabel="boardView" customClass="SKView">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="311"/>
+                                        <color key="backgroundColor" red="0.65857189640000002" green="0.3359474502" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="weT-2e-KZm" secondAttribute="height" multiplier="1:1" id="arA-T8-J5y"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yx2-6s-6Si">
+                                        <rect key="frame" x="311" y="0.0" width="356" height="311"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7a-y0-2QW">
+                                                <rect key="frame" x="0.0" y="0.0" width="356" height="311"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAf-7K-rbI">
+                                                        <rect key="frame" x="8" y="273" width="50.5" height="18"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mc-zU-wgr">
+                                                        <rect key="frame" x="8" y="20" width="25.5" height="18"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XAf-7K-rbI" secondAttribute="trailing" constant="8" id="EBP-Nc-PK1"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5mc-zU-wgr" secondAttribute="trailing" constant="8" id="KWs-r5-87M"/>
+                                                    <constraint firstAttribute="bottom" secondItem="XAf-7K-rbI" secondAttribute="bottom" constant="20" symbolic="YES" id="Sfm-m7-0Q0"/>
+                                                    <constraint firstItem="5mc-zU-wgr" firstAttribute="top" secondItem="T7a-y0-2QW" secondAttribute="top" constant="20" symbolic="YES" id="iD3-5H-yfs"/>
+                                                    <constraint firstItem="5mc-zU-wgr" firstAttribute="leading" secondItem="T7a-y0-2QW" secondAttribute="leading" constant="8" id="iIg-TJ-zTM"/>
+                                                    <constraint firstItem="XAf-7K-rbI" firstAttribute="leading" secondItem="T7a-y0-2QW" secondAttribute="leading" constant="8" id="uZC-mV-u9S"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=regular">
+                                    <mask key="subviews">
+                                        <exclude reference="yx2-6s-6Si"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="fDU-ez-WVs" firstAttribute="trailing" secondItem="Z1X-my-ZuL" secondAttribute="trailing" id="6P8-74-NUZ"/>
+                            <constraint firstItem="weT-2e-KZm" firstAttribute="width" secondItem="fDU-ez-WVs" secondAttribute="width" priority="250" identifier="boardViewWidth250" id="E6p-df-Z9i" userLabel="boardView hR width"/>
+                            <constraint firstItem="Z1X-my-ZuL" firstAttribute="leading" secondItem="fDU-ez-WVs" secondAttribute="leading" id="SHv-0Y-Ddz"/>
+                            <constraint firstItem="Z1X-my-ZuL" firstAttribute="top" secondItem="fDU-ez-WVs" secondAttribute="top" id="fbl-7T-S1V"/>
+                            <constraint firstItem="weT-2e-KZm" firstAttribute="width" relation="lessThanOrEqual" secondItem="fDU-ez-WVs" secondAttribute="width" identifier="boardViewNoWider1000" id="g95-QH-RsG" userLabel="boardView max width"/>
+                            <constraint firstItem="weT-2e-KZm" firstAttribute="height" secondItem="fDU-ez-WVs" secondAttribute="height" priority="250" identifier="boardViewHeight250" id="hbI-3h-qKr" userLabel="boardView hC height"/>
+                            <constraint firstItem="fDU-ez-WVs" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Z1X-my-ZuL" secondAttribute="bottom" id="yub-fF-WMt"/>
+                            <constraint firstItem="weT-2e-KZm" firstAttribute="height" relation="lessThanOrEqual" secondItem="fDU-ez-WVs" secondAttribute="height" identifier="boardViewNoHigher1000" id="zzk-cw-FU9" userLabel="boardView max height"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fDU-ez-WVs"/>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="E6p-df-Z9i"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem largeContentSizeImage="DeleteIcon" systemItem="add" id="qME-aS-JLV">
+                            <connections>
+                                <action selector="deleteButtonPressed:" destination="OOc-2o-Hzn" id="Q3L-2r-cPp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="oHw-aR-ZUg"/>
+                        <barButtonItem systemItem="add" id="Km4-X3-qOg">
+                            <connections>
+                                <action selector="rewindButtonPressed:" destination="OOc-2o-Hzn" id="0e4-NP-DVH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="16" style="plain" systemItem="fixedSpace" id="gJ7-kY-2mp"/>
+                        <barButtonItem systemItem="add" id="8VW-S9-LqD">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="OOc-2o-Hzn" id="CqY-hD-7tE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="16" style="plain" systemItem="fixedSpace" id="qOe-9O-fuJ"/>
+                        <barButtonItem systemItem="add" id="36D-qJ-UT8">
+                            <connections>
+                                <action selector="forwardButtonPressed:" destination="OOc-2o-Hzn" id="Auj-c4-GQe"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="16" style="plain" systemItem="fixedSpace" id="gWe-Ti-26F"/>
+                        <barButtonItem systemItem="add" id="L2i-kK-dte">
+                            <connections>
+                                <action selector="fastForwardButtonPressed:" destination="OOc-2o-Hzn" id="PtC-1E-lki"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="avZ-UE-FsB"/>
+                        <barButtonItem systemItem="add" id="4Pj-sW-0R2">
+                            <connections>
+                                <action selector="displayButtonPressed:" destination="OOc-2o-Hzn" id="HEx-ZX-NJb"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="rP4-Le-ujH"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wl1-uE-O1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="709" y="366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DeleteIcon" width="16" height="16"/>
+    </resources>
 </document>
