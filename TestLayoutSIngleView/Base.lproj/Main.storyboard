@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OOc-2o-Hzn">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,33 +16,33 @@
             <objects>
                 <viewController title="mBVC" id="OOc-2o-Hzn" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="beP-pG-uk8">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1X-my-ZuL">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="311"/>
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="382"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="weT-2e-KZm" userLabel="boardView" customClass="SKView">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="311"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="382"/>
                                         <color key="backgroundColor" red="0.65857189640000002" green="0.3359474502" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="weT-2e-KZm" secondAttribute="height" multiplier="1:1" id="arA-T8-J5y"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yx2-6s-6Si">
-                                        <rect key="frame" x="311" y="0.0" width="356" height="311"/>
+                                        <rect key="frame" x="382" y="0.0" width="354" height="382"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7a-y0-2QW">
-                                                <rect key="frame" x="0.0" y="0.0" width="356" height="311"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="382"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAf-7K-rbI">
-                                                        <rect key="frame" x="8" y="273" width="50.5" height="18"/>
+                                                        <rect key="frame" x="8.0000000000000036" y="344" width="50.333333333333343" height="18"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mc-zU-wgr">
-                                                        <rect key="frame" x="8" y="20" width="25.5" height="18"/>
+                                                        <rect key="frame" x="8.0000000000000018" y="20" width="25.666666666666671" height="18"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -81,11 +81,6 @@
                             <constraint firstItem="weT-2e-KZm" firstAttribute="height" relation="lessThanOrEqual" secondItem="fDU-ez-WVs" secondAttribute="height" identifier="boardViewNoHigher1000" id="zzk-cw-FU9" userLabel="boardView max height"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fDU-ez-WVs"/>
-                        <variation key="heightClass=compact">
-                            <mask key="constraints">
-                                <exclude reference="E6p-df-Z9i"/>
-                            </mask>
-                        </variation>
                     </view>
                     <toolbarItems>
                         <barButtonItem largeContentSizeImage="DeleteIcon" systemItem="add" id="qME-aS-JLV">
